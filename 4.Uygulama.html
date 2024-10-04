@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ile toplama</title>
+    <style>
+        #sonuc{
+        background-color:orange; color:white; font-weight: bold;
+    }
+    </style>
+    
+    <script>
+        function toplamhesapla(){
+            alert("Topla Çalışıyor...");
+            let s1,s2,toplam;
+            s1=parseInt(document.getElementById("Sayi1").value);
+            s2=parseInt(document.getElementById("Sayi2").value);
+            toplam=s1+s2;
+            alert("Toplam sonuç"+toplam);
+            document.getElementById("sonuc").innerHTML="toplam: "+toplam;
+
+        }
+    </script>
+    <script>
+        function bolumhesapla(){
+            let s1,s2,bolum;
+            s1=parseFloat(document.getElementById("Sayi1").value);
+            s2=parseFloat(document.getElementById("Sayi2").value);
+            bolum=s1/s2;
+            if(s2=0){
+                document.getElementById("Tanımsız");
+            }
+            else{
+                document.getElementById("sonuc").innerHTML="Bölüm"+bolum;
+            }
+        }
+    </script>
+    <script>
+        function carpimhesapla(){
+            let s1,s2,carpim
+            s1=parseInt(document.getElementById("Sayi1").value);
+            s2=parseInt(document.getElementById("Sayi2").value);
+            carpim=s1*s2;
+            document.getElementById("sonuc").innerHTML="Çarpım: "+carpim;
+        }
+    </script>
+    <script>
+        function farkhesapla(){
+            let s1,s2,fark;
+            s1=parseInt(document.getElementById("Sayi1").value);
+            s2=parseInt(document.getElementById("Sayi2").value);
+            fark=s1-s2;
+            document.getElementById("sonuc").innerHTML="Fark: "+fark;
+        }
+    </script>
+</head>
+<body>
+    <label for="">Sayı 1:</label>
+    <input type="text" id="Sayi1">
+    <label for="">Sayı 2:</label>
+    <input type="text" id="Sayi2">
+    <div id="sonuc"></div>
+    <button onclick="toplamhesapla()">Toplama</button>
+    <button onclick="bolumhesapla()">Bölme</button>
+    <button onclick="carpimhesapla()">Çarpma</button>
+    <button onclick="farkhesapla()">Çıkarma</button>
+</body>
+</html>
